@@ -1,0 +1,21 @@
+; Export table for the version.dll build: each real version.dll export is mapped to
+; an assembly jump stub (fw_*) that forwards to the genuine System32 version.dll.
+LIBRARY version.dll
+EXPORTS
+GetFileVersionInfoA=fw_GetFileVersionInfoA
+GetFileVersionInfoByHandle=fw_GetFileVersionInfoByHandle
+GetFileVersionInfoExA=fw_GetFileVersionInfoExA
+GetFileVersionInfoExW=fw_GetFileVersionInfoExW
+GetFileVersionInfoSizeA=fw_GetFileVersionInfoSizeA
+GetFileVersionInfoSizeExA=fw_GetFileVersionInfoSizeExA
+GetFileVersionInfoSizeExW=fw_GetFileVersionInfoSizeExW
+GetFileVersionInfoSizeW=fw_GetFileVersionInfoSizeW
+GetFileVersionInfoW=fw_GetFileVersionInfoW
+VerFindFileA=fw_VerFindFileA
+VerFindFileW=fw_VerFindFileW
+VerInstallFileA=fw_VerInstallFileA
+VerInstallFileW=fw_VerInstallFileW
+VerLanguageNameA=fw_VerLanguageNameA
+VerLanguageNameW=fw_VerLanguageNameW
+VerQueryValueA=fw_VerQueryValueA
+VerQueryValueW=fw_VerQueryValueW

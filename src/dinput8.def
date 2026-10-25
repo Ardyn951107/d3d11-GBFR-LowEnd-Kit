@@ -1,0 +1,10 @@
+; Export table for the dinput8.dll build: each real dinput8 export is mapped to
+; an assembly jump stub (fw_*) that forwards to the genuine System32 dinput8.dll.
+LIBRARY dinput8.dll
+EXPORTS
+DirectInput8Create=fw_DirectInput8Create
+DllCanUnloadNow=fw_DllCanUnloadNow PRIVATE
+DllGetClassObject=fw_DllGetClassObject PRIVATE
+DllRegisterServer=fw_DllRegisterServer PRIVATE
+DllUnregisterServer=fw_DllUnregisterServer PRIVATE
+GetdfDIJoystick=fw_GetdfDIJoystick
